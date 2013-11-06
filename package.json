@@ -1,0 +1,30 @@
+{
+  "name": "flatfile",
+  "version": "0.0.0",
+  "description": "Flat-file generator for Node.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mneme/flatfile"
+  },
+  "keywords": [
+    "file",
+    "flat",
+    "flatfile",
+    "flat-file"
+  ],
+  "author": "David Olsson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mneme/flatfile/issues"
+  },
+  "dependencies": {
+    "lodash": "~2.2.1",
+    "chai": "~1.8.1",
+    "mocha": "~1.14.0",
+    "glob": "~3.2.6"
+  }
+}
