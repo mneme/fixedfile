@@ -68,7 +68,7 @@ describe('FixedFile', function(){
 			ff.done();
 		});
 		
-		it('should write objects lines', function(done){
+		it('should write all objects as lines', function(done){
 			for (var i = 0; i < 1000; i++) {
 				ff.write({name: 'name'}, 'name');
 			}

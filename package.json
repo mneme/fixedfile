@@ -1,7 +1,7 @@
 {
-  "name": "flatfile",
-  "version": "0.0.0",
-  "description": "Flat-file generator for Node.js",
+  "name": "fixedfile",
+  "version": "0.0.1",
+  "description": "Fixed-width-file generator for Node.js",
   "main": "lib/index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha test"
@@ -19,7 +19,7 @@
   "author": "David Olsson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mneme/flatfile/issues"
+    "url": "https://github.com/mneme/fixedfile/issues"
   },
   "dependencies": {
     "lodash": "~2.2.1",
