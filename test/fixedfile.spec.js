@@ -5,7 +5,7 @@ var
 	path = require('path');
 
 
-var spec = path.join('test/spec'),
+var template = path.join('test/template'),
 		output = path.join('test/output');
 
 
@@ -16,7 +16,7 @@ function loadFile(){
 function newFile(){
 	var ff = new FixedFile();
 	ff
-		.loadConfig(spec)
+		.loadConfig(template)
 		.setWriteStream(output);
 	return ff;
 }
@@ -31,14 +31,14 @@ describe('FixedFile', function(){
 			var fixedfile = new FixedFile()
 		})
 	
-		it('should load specs', function(){
+		it('should load templates', function(){
 			var fixedfile = new FixedFile()
-			fixedfile.loadConfig(spec);
-			expect(fixedfile.specs).to.exist;
-			expect(fixedfile.specs.name).to.exist;
+			fixedfile.loadConfig(template);
+			expect(fixedfile.templates).to.exist;
+			expect(fixedfile.templates.name).to.exist;
 		})
 	
-		it('should throw error when trying to use wrong spec', function(){
+		it('should throw error when trying to use wrong template', function(){
 			var ff = newFile();
 			expect(ff.write({}, 'doesNotExist')).to.throw.Error;
 		});
