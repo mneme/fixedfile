@@ -5,7 +5,7 @@ var
 	path = require('path');
 
 
-var template = path.join('./test/spec'),
+var template = path.join('test/spec'),
 		output = path.join('test/output');
 
 
@@ -38,13 +38,13 @@ describe('FixedFile', function(){
 			expect(fixedfile.templates.name).to.exist;
 		})
 	
-		it('should throw error when trying to use wrong template', function(){
+		it('should throw error when trying to use wrong template', function(done){
 			var ff = newFile();
-			function run(){
-				ff.write({}, 'doesNotExist')
-			}
+			ff.write({}, 'doesNotExist', function(err, res){
+				expect(err).to.be.not.null;
+				done();
+			})
 
-			expect(run).to.throw(Error);
 		});
 	
 	});
