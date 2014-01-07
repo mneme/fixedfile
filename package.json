@@ -1,6 +1,6 @@
 {
   "name": "fixedfile",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Fixed-width-file generator for Node.js",
   "main": "lib/fixedfile.js",
   "scripts": {
