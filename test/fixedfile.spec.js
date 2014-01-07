@@ -5,7 +5,7 @@ var
 	path = require('path');
 
 
-var template = path.join('test/spec'),
+var template = path.join('./test/spec'),
 		output = path.join('test/output');
 
 
@@ -40,7 +40,11 @@ describe('FixedFile', function(){
 	
 		it('should throw error when trying to use wrong template', function(){
 			var ff = newFile();
-			expect(ff.write({}, 'doesNotExist')).to.throw.Error;
+			function run(){
+				ff.write({}, 'doesNotExist')
+			}
+
+			expect(run).to.throw(Error);
 		});
 	
 	});
@@ -54,7 +58,7 @@ describe('FixedFile', function(){
 		it('should be created', function(){
 			ff.write({name:"test"}, 'name');
 			ff.done();
-			expect(fs.statSync(output)).to.not.throw.Error;
+			expect(fs.statSync(output)).to.not.throw;
 		});
 
 		it('should have the right length', function(done){
