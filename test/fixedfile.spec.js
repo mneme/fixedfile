@@ -5,7 +5,7 @@ var
 	path = require('path');
 
 
-var template = path.join('test/template'),
+var template = path.join('test/spec'),
 		output = path.join('test/output');
 
 
@@ -52,7 +52,8 @@ describe('FixedFile', function(){
 		});
 		
 		it('should be created', function(){
-			ff.write({name:"test"}, 'name').done();
+			ff.write({name:"test"}, 'name');
+			ff.done();
 			expect(fs.statSync(output)).to.not.throw.Error;
 		});
 
